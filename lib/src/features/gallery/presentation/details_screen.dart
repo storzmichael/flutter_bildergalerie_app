@@ -16,7 +16,7 @@ class DetailsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Scrollbar(
-          thumbVisibility: true, // Optional: Damit der Scrollindikator immer sichtbar ist
+          thumbVisibility: true,
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
