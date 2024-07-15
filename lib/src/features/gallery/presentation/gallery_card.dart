@@ -18,28 +18,31 @@ class GalleryCard extends StatelessWidget {
           ),
         );
       },
-      child: Card(
-        child: Column(
-          children: [
-            Expanded(
-              child: SizedBox(
-                width: double.infinity,
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(12.0),
-                  ),
-                  child: Image.asset(
-                    galleryItem.imagePath,
-                    fit: BoxFit.cover,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Card(
+          child: Column(
+            children: [
+              Expanded(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(12.0),
+                    ),
+                    child: Image.asset(
+                      galleryItem.imagePath,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Text(galleryItem.imageTitle),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Text(galleryItem.imageTitle),
+              )
+            ],
+          ),
         ),
       ),
     );
