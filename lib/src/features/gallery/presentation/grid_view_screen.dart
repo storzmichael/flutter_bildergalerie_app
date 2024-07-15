@@ -7,15 +7,12 @@ class GridViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double gridPadding = 10;
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: Scrollbar(
+        thumbVisibility: true,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: gridPadding,
-              mainAxisSpacing: gridPadding,
             ),
             itemCount: galleryData.length,
             itemBuilder: (context, index) {
