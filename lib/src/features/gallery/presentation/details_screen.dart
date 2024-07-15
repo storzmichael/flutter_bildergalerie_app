@@ -15,33 +15,36 @@ class DetailsScreen extends StatelessWidget {
         title: const Text('Details'),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  child: Image.asset(
-                    galleryItem.imagePath,
-                    fit: BoxFit.contain,
+        child: Scrollbar(
+          thumbVisibility: true, // Optional: Damit der Scrollindikator immer sichtbar ist
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    child: Image.asset(
+                      galleryItem.imagePath,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  galleryItem.imageTitle,
-                  style: TextStyle(fontSize: detailTitleFontSize),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  galleryItem.imageDate,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8),
-                Text(galleryItem.imageDescription),
-              ],
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    galleryItem.imageTitle,
+                    style: TextStyle(fontSize: detailTitleFontSize),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    galleryItem.imageDate,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(galleryItem.imageDescription),
+                ],
+              ),
             ),
           ),
         ),
